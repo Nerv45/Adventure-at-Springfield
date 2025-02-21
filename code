@@ -1,0 +1,104 @@
+print('''                                     .-~~~-, 
+                                    (       ) 
+                                   (         ) 
+              -^x^-               (          ) 
+            /~     ~\           (           ) 
+           |         |         (           ) 
+           |         |        (           ) 
+           |     __ _,       (~~~~-(     ) 
+          /\/\  (. ).)       `_'_', (   ) 
+           C       __)       (.( .)-(  ) 
+           |   /~~~  \      (_      ( ) 
+           /   \ ~===='    /_____/` D)}} 
+         /`-_   `---'         \     |}} 
+    .__|~-/^\-~|_/_   |^^^^^^^||    |}} 
+   __.         ||/.\  |       |OooooO}} 
+   \           ---. \ |       |      \ 
+  _-    ,`_'_'  .~\  \|__   __|-____ / )} 
+  <     -(. ).)    \  ( .\ (. )     \(_/ )} 
+  ~-       _) \_- ooo @  (_)  @      \(_//.} 
+ / /_C (-.____)  /((O)/       \     ._/\~_.} 
+/   |_\     /   / /\\\\\\\`-----''    _|o<  |__ 
+|     \ooooO   (  \ \\ \\___/     \ `_'_',  / 
+ \     \__-|    \  `)\\-^\\ ^--.  /_(.(.)- _\  
+  \_\_)   |-___/   / \ V /.~ \/\\\ (@)___/ ~| 
+  /        |       /   | |.  /`\\_/\/   / 
+ /         |      (   C`-'` /  |  \/   (/  / 
+/_________-        \  `C__-~   |  /    (/ / 
+     | | |          \__________|  \     (/   
+
+*   *   *   *   *   *   *   *   *   *   *   *   *\n''') 
+
+import time 
+
+# Function to print messages with a delay 
+def print_pause(message): 
+    print(message) 
+    time.sleep(3) 
+
+# Introduction to the game 
+def intro(): 
+
+    print_pause("Hi my dear friend, today we have a small adventure at Springfield.") 
+    print_pause("Every time you have choose the right way during the quest.") 
+    print_pause("We are at Simpson's house. This morning Homer opened a box with donuts.") 
+    print_pause("There was a golden donate. A lucky one if you eat it. During morning breakfast donut disappeared.") 
+    print_pause("Homer is disapointed and Lisa decides to help her father. ") 
+    print_pause("Now you are as a Lias has to find golden donate.") 
+    print_pause("Follow the instructions and help our heroes to find a golden donut.") 
+
+# Function to handle the player's choice of path 
+def choose_path(): 
+    print_pause("Enter 1 to check the Bard about donate.") 
+    print_pause("Enter 2 to check Marge.") 
+    choice = input("What will you do? (1 or 2)\n") 
+    if choice == '1': 
+        bart() 
+    elif choice == '2': 
+        marge() 
+    else: 
+        print_pause("Invalid choice. Please enter 1 or 2.") 
+        choose_path() 
+
+# Function for the bart scenario 
+def bart(): 
+    print_pause("Aw karamba! What a donate are you talking about?") 
+    print_pause("I will eat my boots if you found any donate at me.") 
+    choice = input("Do you want to check Bart's pockets (1) or leave Bart alone (2)?\n") 
+    if choice == '1': 
+        print_pause("You bravely fight with the Bart and defeat it!") 
+        print_pause("You find a golden donate.") 
+        print_pause("Congratulations! You won the game!") 
+    elif choice == '2': 
+        print_pause("You got a little bit in a stress.") 
+        print_pause("You start plying the saxophone.") 
+        print_pause("Game over!") 
+        choose_path() 
+    else: 
+        print_pause("Invalid choice. Please enter 1 or 2.") 
+        bart() 
+
+# Function for the lake scenario 
+def marge(): 
+    print_pause("Oh darling! Beleive me, I haven't take any donate at all.") 
+    choice = input("Do you want to check the Marge (1) or leave Marge alone (2)?\n") 
+    if choice == '1': 
+        print_pause("Marge forgets about Maggy. She crowles behind the Bart and pulls out a golden donate from Bart's pockets.") 
+        print_pause("Aw karamba, Why! That was cheating!.") 
+        print_pause("You find a golden donate. Bart has taken it!") 
+        print_pause("Congratulations! You won the game!") 
+    elif choice == '2': 
+        print_pause("Lisa says to Homer that there were no golden donate in the box You just dreamed about it, Homer!") 
+        print_pause("After breackfast Lisa comes to her room and writes a new chapter of her saga story. 'Milhause and his princess'. ") 
+        print_pause("Game over!") 
+    else:1 
+        print_pause("Invalid choice. Please enter 1 or 2.") 
+        marge() 
+
+# Function to start the game 
+def play_game(): 
+    intro() 
+    choose_path() 
+
+# Call the function to start the game 
+play_game()
